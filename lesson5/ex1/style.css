@@ -1,0 +1,21 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper
+{
+  max-width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.size
+{
+  border: solid 1px black;
+  width: 33.33%;
+}
