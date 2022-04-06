@@ -213,6 +213,7 @@
 }
 .aboutUsContainer > .content
 {
+  width: 960px;
   margin-top: 40px;
   line-height: 24px;
   color: #999;
@@ -366,6 +367,7 @@
   font-weight: 400;
   color: #999;
 }
+/***************************************Feauture**********************************************/
 .feauture
 {
   width: 100%;
@@ -435,4 +437,53 @@
   right: 180px;
   bottom: -88px;
   z-index: 3;
+}
+/***************************************Services2**********************************************/
+.services2
+{
+  width: 100%;
+}
+.services2Container
+{
+  margin: 0 auto;
+  margin-top: 111px;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.services2Container > .tangle
+{
+  background-color: red;
+  margin-top: 40px;
+  margin-bottom: 45px;
+}
+.services2Container > p
+{
+  width: 960px;
+  height: 130px;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #999;
+  /* margin: 0 117px; */
+}
+.titleServices2  p:first-child
+{
+  color: black;
+  font-family: 'Kaushan Script', cursive;
+  font-weight: 400;
+  font-size: 24px;
+}
+.titleServices2  p:last-child
+{
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
