@@ -5,6 +5,10 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+body
+{
+  width: 100vw;
+}
 .wrapper
 {
   width: 100%;
@@ -38,7 +42,7 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 25px;
 }
 .menuBar > p
 {
