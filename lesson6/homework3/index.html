@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="text" style="font-size: 24px;">Lập trình FronTEnd tại ZendVN hướng dẫn frontend từ a đến z. FRONTEND không khó để học!</p>
+  <script>
+    var a = document.getElementById("text").innerHTML
+    a = a.toLowerCase()
+    while(a.indexOf("frontend") != -1)    
+    {
+      a = a.replace("frontend", "Frontend")
+    }
+    document.getElementById("text").innerHTML = a
+  </script>
+</body>
+</html>
