@@ -8,19 +8,21 @@
 </head>
 <body>
   <input type="number" id="input" onchange="printTriangle()">
+  <div id="space"></div>
   <script>
     function printTriangle()
     {
       var a = document.getElementById("input").value
-      // console.log(a)
-      document.getElementById("space").innerHTML = "Tài liệu học CSS";
-      for (var i = 0; i <= a; i++)
+      var b = document.getElementById("space")
+      b.innerHTML = ""
+      for (let i = 0; i <= a; i++)
       {
-        for (var j = i; j <= a; j++)
+        let elm = document.createElement("p")
+        for (let j = i; j <= a; j++)
         {
-          document.write(j);
+          elm.innerHTML = elm.innerHTML.concat(j)
         }
-        document.write("<br>");
+        b.appendChild(elm)
       }
     }
   </script>
