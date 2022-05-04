@@ -43,7 +43,7 @@
                         <h4 class="mb-0"><span class="badge bg-success">NAME - ASC</span></h2>
                     </div>
                     <div class="col-5">
-                        <button type="button" class="btn btn-info btn-block">Add Task</button>
+                        <button onclick="openInputPanel()" type="button" class="btn btn-info btn-block">Add Task</button>
                     </div>
                 </div>
                 <!-- CONTROL : END -->
@@ -51,7 +51,7 @@
                 <!-- FORM : START -->
                 <div class="row mt-3" id="area-form">
                     <div class="col-sm-5 offset-sm-7">
-                        <div class="d-flex">
+                        <div id="inputPanel" class="d-flex">
                             <input type="text" id="input-name" placeholder="Task Name" class="form-control me-1" />
                             <select id="input-level" class="form-select me-1" style="width: unset">
                                 <option value="Small">Small</option>

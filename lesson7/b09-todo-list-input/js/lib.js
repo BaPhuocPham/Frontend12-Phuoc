@@ -19,6 +19,12 @@ function setBackgroundColor(elm)
   getTdTag.getElementsByClassName('backgrColor')[0].style = `background-color: ${backgrColor} !important`
 }
 
+function openInputPanel()
+{
+  if(inputPanel.style.display == "none") inputPanel.style = "display: flex !important"
+  else inputPanel.style = "display: none !important"
+}
+
 function printTask()
 {
   getInput.value = ""
