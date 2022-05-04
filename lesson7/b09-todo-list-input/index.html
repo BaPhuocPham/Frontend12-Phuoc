@@ -54,9 +54,9 @@
                         <div class="d-flex">
                             <input type="text" id="input-name" placeholder="Task Name" class="form-control me-1" />
                             <select id="input-level" class="form-select me-1" style="width: unset">
-                                <option value="0">Small</option>
-                                <option value="1">Medium</option>
-                                <option value="2">High</option>
+                                <option value="Small">Small</option>
+                                <option value="Medium">Medium</option>
+                                <option value="High">High</option>
                             </select>
                             <button id="submitBtn" onclick="getTask()" type="button" class="btn btn-primary btn-sm me-1" data-mdb-ripple-unbound="true">Submit</button>
                             <button type="button" class="btn btn-danger btn-sm" data-mdb-ripple-unbound="true">Cancel</button>
@@ -116,6 +116,8 @@
     </div>
 
     <script src="js/mdb.min.js"></script>
+    <script src="./js/defined.js"></script>
+    <script src="./js/lib.js"></script>
     <script src="js/main.js"></script>
 </body>
 
