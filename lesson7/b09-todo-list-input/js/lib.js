@@ -21,14 +21,14 @@ function setBackgroundColor(elm)
 
 function openInputPanel()
 {
-  if(inputPanel.style.display == "none") inputPanel.style = "display: flex !important"
-  else inputPanel.style = "display: none !important"
+  if(element_inputPanel.style.display == "none") element_inputPanel.style = "display: flex !important"
+  else element_inputPanel.style = "display: none !important"
 }
 
 function printTask()
 {
-  getInput.value = ""
-  contentArea.innerHTML = ""
+  element_getInput.value = ""
+  element_contentArea.innerHTML = ""
   for (i in taskList)
   {
     let index = Number(i)+1
@@ -45,7 +45,7 @@ function printTask()
       </td>
       </tr>
     `
-    contentArea.append(addTr)
+    element_contentArea.append(addTr)
     setBackgroundColor(taskList[i])
   }
 }
@@ -57,8 +57,8 @@ const uid = function()        //Create unique id
 
 function getTask()
 {
-  contentArea.innerHTML = ""
-  let taskName = getInput.value
+  element_contentArea.innerHTML = ""
+  let taskName = element_getInput.value
   if (taskName.length == 0) 
   {
     alert("Please enter the task")
@@ -66,14 +66,13 @@ function getTask()
   }
   else 
   {
-    let level = document.getElementById("input-level").value
     let taskElement = 
     {
       name : taskName,       
-      level : level,
+      level : element_level.value,
       id : uid()
     }
-    let taskId = submitBtn.getAttribute("idOfElm")
+    let taskId = element_submitBtn.getAttribute("idOfElm")
     if (taskId) 
     {
       for (i in taskList)
@@ -81,7 +80,7 @@ function getTask()
         if(taskList[i].id == taskId)
         {
           taskList[i] = taskElement
-          submitBtn.removeAttribute("idOfElm")
+          element_submitBtn.removeAttribute("idOfElm")
         }
       }
     }
@@ -104,12 +103,14 @@ function deleteTask(id)
 
 function editTask(id)
 {
+  element_inputPanel.style = "display: flex !important" //open input panel
   for (i in taskList)
   {
     if(taskList[i].id == id.id) 
     {
-      getInput.value = taskList[i].name
-      submitBtn.setAttribute('idOfElm', id.id)
+      element_getInput.value = taskList[i].name
+      element_level.value = taskList[i].level
+      element_submitBtn.setAttribute('idOfElm', id.id)
     }
   }
 }
