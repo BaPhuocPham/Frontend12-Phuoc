@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <div class="option">
+        <select id="level" onchange="changeSolutionCount()">
+          <option value="1">Level 1</option>
+          <option value="2">Level 2</option>
+        </select>
+        <div class="optionContainer">
+          <button>Rule</button>
+          <button>High score</button>
+          <button>Play</button>
+        </div>
+      </div>
+      <div class="gamePlay">
+        <div class="gamePlayContainer">
+          <div class="choiceHistory">
+            <div class="userChoice">5</div>
+            <div class="userChoice">6</div>
+            <div class="userChoice">7</div>
+          </div>
+          <div class="emoji"></div>
+          <div class="solutionContainer">
+            <div class="solution"></div>
+            <div class="solution"></div>
+            <div class="solution"></div>
+            <div class="solution"></div>
+            <div class="solution"></div>
+          </div>
+        </div>
+        <div class="iconChoice">
+          <i class="fa-brands fa-earlybirds"></i>
+          <i class="fa-solid fa-arrow-rotate-right"></i>
+          <i class="fa-solid fa-floppy-disk"></i>
+          <i class="fa-solid fa-maximize"></i>
+        </div>
+      </div>
+      <div class="infor">
+        <div class="surviveOutline">
+          <i id="survive1" class="fa-solid fa-heart"></i>
+          <i id="survive1" class="fa-solid fa-heart"></i>
+          <i id="survive1" class="fa-solid fa-heart"></i>
+        </div>
+        <div class="message">
+          <p>The number is <span>bigger</span> than <span class="theGuess" id="message1">25</span></p>
+          <p>The number is <span>bigger</span> than <span class="theGuess" id="message2">25</span></p>
+          <p>The number is <span>bigger</span> than <span class="theGuess" id="message3">25</span></p>
+          <p><span class="theResult" id="result">26</span> is the secret number</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+        <button>Share</button>
+        <div class="icon">
+          <div class="socialIcon">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-google-plus"></i>
+          </div>
+          <i class="fa-solid fa-bell-slash"></i>
+        </div>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/562b7b17ae.js" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+</html>

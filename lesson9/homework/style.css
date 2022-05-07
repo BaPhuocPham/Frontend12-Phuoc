@@ -1,0 +1,164 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button
+{
+  cursor: pointer;
+}
+.wrapper
+{
+  margin: 0 auto;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  max-width: 1200px;
+}
+.content
+{
+  margin-top: 30px;
+  display: flex ;
+}
+.option
+{
+  width: 25%;
+}
+.optionContainer
+{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 20px;
+}
+.optionContainer > button
+{
+  width: 50%;
+  text-align: center;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: yellow;
+  margin-bottom: 10px;
+}
+.gamePlay
+{
+  width: 50%;
+  display: flex;
+}
+.gamePlayContainer
+{
+  width: 95%;
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  align-items: center;
+}
+.choiceHistory
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;  
+  margin-bottom: 20px;
+  text-align: center;
+}
+.userChoice
+{
+  margin: 0 5px;
+  padding: 5px;
+  width: 100px;
+  border: solid 1px black;
+}
+.emoji
+{
+  width: 50%;
+  height: 100px;
+  margin: 0 auto;
+  border: solid 1px black;
+}
+.solutionContainer
+{
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.solution
+{
+  width: 15%;
+  border: solid 1px black;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
+.iconChoice
+{
+  width: 5%;
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  margin-left: 10px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.iconChoice > i
+{
+  margin-bottom: 10px;
+}
+.infor
+{
+  width: 25%;
+}
+.infor > .message
+{
+  margin-top: 50px;
+  font-size: 16px;
+  width: 100%;
+  margin-left: 30px;
+  border: solid 1px black;
+  padding: 20px;
+}
+.infor > .message > p
+{
+  margin-bottom: 20px;
+}
+.theGuess
+{
+  padding: 5px 10px;
+  background-color: green;
+  color: white;
+  font-size: 24px;
+}
+.theResult
+{
+  padding: 5px 10px;
+  background-color: green;
+  color: yellow;
+  font-size: 24px;
+  font-weight: 700;
+}
+.surviveOutline
+{
+  display: flex;
+  font-size: 30px;
+  justify-content: flex-end;
+  color: red;
+}
+.surviveOutline > i
+{
+  margin-right: 10px;
+}
+.footer
+{
+  width: 100%;
+  margin-top: 90px;
+}
+.footer > .icon
+{
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+}
