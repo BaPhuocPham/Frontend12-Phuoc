@@ -24,12 +24,25 @@ button
 {
   width: 25%;
 }
+.levelOptionBox
+{
+  width: 40%;
+  padding: 5px 10px;
+  text-align: center;
+  font-size: 16px;
+  color: black;
+  background-color: yellow;
+  /* background-color: green; */
+  border: solid 1px black;
+  border-radius: 5px;
+}
 .optionContainer
 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   padding-right: 20px;
+  margin-top: 35px;
 }
 .optionContainer > button
 {
@@ -38,6 +51,7 @@ button
   padding: 5px 10px;
   font-size: 16px;
   font-weight: 400;
+  border-radius: 5px;
   background-color: yellow;
   margin-bottom: 10px;
 }
@@ -54,6 +68,7 @@ button
   flex-direction: column;
   padding: 10px 0;
   align-items: center;
+  border-radius: 10px;
 }
 .choiceHistory
 {
@@ -68,6 +83,9 @@ button
   margin: 0 5px;
   padding: 5px;
   width: 100px;
+  height: 41px;
+  font-size: 20px;
+  border-radius: 10px;
   border: solid 1px black;
 }
 .emoji
@@ -75,7 +93,11 @@ button
   width: 50%;
   height: 100px;
   margin: 0 auto;
+  border-radius: 10px;
   border: solid 1px black;
+  background-image: url("./Bad\ guys.png");
+  background-position: center;
+  background-size: cover;
 }
 .solutionContainer
 {
@@ -88,10 +110,17 @@ button
 .solution
 {
   width: 15%;
+  border-radius: 10px;
   border: solid 1px black;
   padding: 10px;
   margin: 5px;
   text-align: center;
+  cursor: pointer;
+  transition: all 1s;
+}
+.solution:hover
+{
+  background-color: antiquewhite;
 }
 .iconChoice
 {
@@ -107,6 +136,7 @@ button
 .iconChoice > i
 {
   margin-bottom: 10px;
+  cursor: pointer;
 }
 .infor
 {
@@ -117,7 +147,9 @@ button
   margin-top: 50px;
   font-size: 16px;
   width: 100%;
+  height: 240px;
   margin-left: 30px;
+  border-radius: 10px;
   border: solid 1px black;
   padding: 20px;
 }
@@ -161,4 +193,19 @@ button
   display: flex;
   justify-content: space-between;
   font-size: 30px;
+}
+.footer > .share
+{
+  width: 100px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+#myMusic
+{
+ display: none;
+}
+.footer > .icon > #mute
+{
+  display: none;
 }

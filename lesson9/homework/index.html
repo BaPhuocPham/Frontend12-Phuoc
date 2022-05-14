@@ -14,22 +14,22 @@
   <div class="wrapper">
     <div class="content">
       <div class="option">
-        <select id="level" onchange="changeSolutionCount()">
+        <select class="levelOptionBox" id="level" onchange="changeSolutionCount()">
           <option value="1">Level 1</option>
           <option value="2">Level 2</option>
         </select>
         <div class="optionContainer">
           <button>Rule</button>
           <button>High score</button>
-          <button>Play</button>
+          <!-- <button>Play</button>   -->
         </div>
       </div>
       <div class="gamePlay">
         <div class="gamePlayContainer">
           <div class="choiceHistory">
-            <div class="userChoice">5</div>
-            <div class="userChoice">6</div>
-            <div class="userChoice">7</div>
+            <div class="userChoice"></div>
+            <div class="userChoice"></div>
+            <div class="userChoice"></div>
           </div>
           <div class="emoji"></div>
           <div class="solutionContainer">
@@ -41,7 +41,7 @@
           </div>
         </div>
         <div class="iconChoice">
-          <i class="fa-brands fa-earlybirds"></i>
+          <i title="Get the recommend" onclick="recommend()" class="fa-brands fa-earlybirds"></i>
           <i class="fa-solid fa-arrow-rotate-right"></i>
           <i class="fa-solid fa-floppy-disk"></i>
           <i class="fa-solid fa-maximize"></i>
@@ -49,9 +49,9 @@
       </div>
       <div class="infor">
         <div class="surviveOutline">
-          <i id="survive1" class="fa-solid fa-heart"></i>
-          <i id="survive1" class="fa-solid fa-heart"></i>
-          <i id="survive1" class="fa-solid fa-heart"></i>
+          <i class="fa-solid fa-heart"></i>
+          <i class="fa-solid fa-heart"></i>
+          <i class="fa-solid fa-heart"></i>
         </div>
         <div class="message">
           <p>The number is <span>bigger</span> than <span class="theGuess" id="message1">25</span></p>
@@ -62,18 +62,25 @@
       </div>
     </div>
     <div class="footer">
-        <button>Share</button>
+        <div class="share">Share</div>
         <div class="icon">
           <div class="socialIcon">
             <i class="fa-brands fa-facebook"></i>
             <i class="fa-brands fa-instagram"></i>
             <i class="fa-brands fa-google-plus"></i>
           </div>
-          <i class="fa-solid fa-bell-slash"></i>
+          <i id="play" onclick="muted()" class="fa-solid fa-volume-high"></i>
+          <i id="mute" onclick="play()" class="fa-solid fa-volume-xmark"></i>
         </div>
     </div>
   </div>
+  <audio id="myMusic" controls autoplay>
+    <source src="./music/y2mate.com - THERE S NO ONE AT ALL VIDEO LYRICS REMAKE PROD BY SON TUNG MTP  AAM MUSIC.mp3.webm" type="audio/ogg">
+    <source src="./music/y2mate.com - Always with me   Spirited Away OST Soundtrack.mp3" type="audio/ogg">
+  Your browser does not support the audio element.
+  </audio>
   <script src="https://kit.fontawesome.com/562b7b17ae.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="main.js"></script>
 </body>
 </html>
