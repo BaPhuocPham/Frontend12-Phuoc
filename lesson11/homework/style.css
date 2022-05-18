@@ -1,0 +1,119 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+.wrapper
+{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+.header
+{
+  width: 100%;
+  display: flex;
+}
+/*------------------------Start color picker-------------------------*/
+code
+{
+  padding: 5px 8px;
+  border-radius: 18px;
+  background: #fff;
+  color: red;
+}
+[type='color']
+{
+  appearance: none;
+  padding: 0;
+  width: 15px;
+  height: 15px;
+  border: none;
+}
+[type='color']::-webkit-color-swatch-wrapper
+{
+  padding: 0;
+}
+[type='color']::-webkit-color-swatch
+{
+  border: none;
+}
+.color-picker
+{
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #f8f9f9;
+  text-align: center;
+  
+}
+#colorPicker
+{
+  box-shadow: -1px 3px 8px -1px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+.colorIcon
+{
+  font-size: 20px;
+  cursor: pointer;
+}
+/*------------------------End color picker-------------------------*/
+/*------------------------Content-------------------------*/
+.content
+{
+  width: 100%;
+  box-shadow: -1px 3px 8px -1px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  padding: 0 30px;
+}
+.content > .title
+{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 30px 0px;
+}
+.content > .contentnArea
+{
+  font-size: 16px;
+  font-weight: 400;
+}
+/*------------------------Dark Mode-------------------------*/
+.darkMode
+{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 5px 10px;
+  font-size: 30px;
+  border-radius: 30px;
+  box-shadow: -1px 3px 8px -1px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  cursor: pointer;
+}
+.moon
+{
+  color: #B3B3B3;
+}
+#darkModeCheck
+{
+  display: none;
+}
+#darkModeCheck:checked ~ .moon
+{
+  color: yellow;
+}
+/*------------------------Zoom-------------------------*/
+.zoom, .copy
+{
+  padding: 7px 15px;
+  border: solid 1px #ccc;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 15px;
+}
