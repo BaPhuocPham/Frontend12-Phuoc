@@ -25,16 +25,16 @@
 <body>
     <div class="wrapper">
       <div class="header">
-        <span class="color-picker">
+        <span title="color" class="color-picker">
           <label for="colorPicker">
-              <input type="color" value="#1DBBCE" id="colorPicker">
+              <input  type="color" value="#1DBBCE" id="colorPicker">
               <i class="fa-solid fa-droplet colorIcon"></i>
           </label>
         </span>
-        <span class="zoom" onclick="checkZoom()">
+        <span title="zoom" class="zoom" onclick="checkZoom()">
           <i class="fa-solid fa-magnifying-glass-plus"></i>
         </span>
-        <span class="copy" onclick="checkCopy()">
+        <span title="copy" class="copy" onclick="checkCopy()">
           <i class="fa-solid fa-copy"></i>
         </span>
       </div>
@@ -52,6 +52,8 @@
         </div>
       </label>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

@@ -7,7 +7,9 @@ const element_colorIcon = document.getElementsByClassName("colorIcon")[0]
 const element_copy = document.getElementsByClassName("copy")[0]
 const element_zoom = document.getElementsByClassName("zoom")[0]
 let zoomCount = 0
-
+$( function() {
+  $( "document" ).tooltip();
+} );
 getData()
 
 function getData()
@@ -63,6 +65,7 @@ function copyTextToClipboard(text) {
   }
   navigator.clipboard.writeText(text).then(function() {
     console.log('Async: Copying to clipboard was successful!');
+    alert("Copying successful!")
   }, function(err) {
     console.error('Async: Could not copy text: ', err);
   });
@@ -70,7 +73,6 @@ function copyTextToClipboard(text) {
 function checkCopy()
 {
   copyTextToClipboard(element_content.children[1].innerHTML)
-  alert("Copying successful!")
 }
 function checkZoom()
 {
