@@ -220,16 +220,37 @@
         <div class="image">
           <img src="https://avatar-ex-swe.nixcdn.com/song/2021/07/09/5/5/8/2/1625815274622.jpg" alt="">
         </div>
-        <p class="musicName"></p>
-        <p class="author"></p>
-        <div class="icon">
+        <div class="title">
+          <p class="musicName">Kiss Me More</p>
+          <p class="author">Doja Cat, SZA</p>
+        </div>
+        <!-- <div class="icon">
           <i class="fa-regular fa-heart"></i>
-          <i class="fa-solid fa-window-maximize"></i>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div> -->
+      </div>
+      <div class="PlayArea">
+        <div class="controlMusic">
+          <i class="fa-solid fa-shuffle"></i>
+          <i class="fa-solid fa-backward-fast"></i>
+          <i id="playBtn" class="fa-solid fa-play"></i>
+          <i id="pauseBtn"class="fa-solid fa-pause"></i>
+          <i class="fa-solid fa-forward-fast"></i>
+          <i class="fa-solid fa-retweet"></i>
+        </div>
+        <div class="rangeInputPLayer">
+          <span class="currentTime">0:00</span>
+          <input type="range"  min="0" max="100" name="" id="">
+          <span class="totalTime">3:46</span>
         </div>
       </div>
-      <div class="PlayArea"></div>
-      <div class="controlArea"></div>
-
+      <div class="feature">
+        <i class="fa-solid fa-rectangle-list"></i>
+        <div class="volume">
+          <label for="controlVolume"><i class="fa-solid fa-volume-high"></i></label>
+          <input type="range"  min="0" max="100" name="" id="controlVolume">
+        </div>
+      </div>
     </section>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

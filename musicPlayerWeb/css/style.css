@@ -88,7 +88,7 @@
 {
   width: 82%;
   height: 64px;
-  background-color: #212121;
+  background-color: #121212;
   position: fixed;
   margin-left: 18%;
   padding: 0 30px;
@@ -102,7 +102,7 @@
 {
   padding: 5px 10px;
   border-radius: 30px;
-  background-color: #131313;
+  background-color: #2b2721;
   font-size: 22px;
   color: #a6a6a6;
   margin-right: 15px;
@@ -125,7 +125,7 @@
 /* --------------------------------- Content Space ----------------------------------------------- */
 .contentSpace
 {
-  background-color: #212121;
+  background-color: #121212;
   width: 100%;
   padding-top: 88px;
   padding-left: 22%;
@@ -143,7 +143,7 @@
 }
 .playListContainer
 {
-  background-color: #212121;
+  background-color: #121212;
   width: 100%;
   margin-top: 21px;
   display: flex;
@@ -156,10 +156,10 @@
   width: 20%;
   height: 260px;
   border-radius: 7px;
-  background-color: #131313;
+  background-color: #161616;
   display: flex;
   flex-direction: column;
-  padding: 15px;
+  padding: 20px;
   margin-right: 24px;
   margin-bottom: 30px;
   align-items: center;
@@ -169,13 +169,14 @@
 }
 .playListItem:hover
 {
- background-color: #171717;
+ background-color: rgba(179, 179, 179, 0.1);
 }
 .playListItem:hover .image > .playBtnPlayList
 {
   display: block;
-  transform: translateY(-10%);
-  transition: all 1s ease;
+  opacity: 1;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
 } 
 .playListItem > .image
 {
@@ -183,6 +184,7 @@
   position: relative;
   height: 70%;
   min-height: fit-content;
+  max-height: fit-content;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 3px 3px 8px 5px #080808;
@@ -204,14 +206,14 @@
 .playListItem > .image > .playBtnPlayList
 {
   position: absolute;
-  bottom: 0;
+  bottom: -10%;
   right: 10%;
-  display: none;
+  opacity: 0;
   font-size: 20px;
   padding: 10px 15px;
   background-color: #1FDF64;  
   border-radius: 30px;
-  transition: all 1s ease;
+  transition: all 0.3s ease;
 }
 /* --------------------------------- Music player bar ----------------------------------------------- */
 .musicPlayerBar
@@ -221,9 +223,10 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  background-color: #b3b3b3;
+  background-color: #181818;
   display: flex;
   flex-wrap: nowrap;
+  align-items: flex-start;
 }
 .musicInfor
 {
@@ -231,6 +234,17 @@
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
+}
+.musicInfor > .title > .musicName
+{
+  font-size: 16px;
+  font-weight: 400;
+}
+.musicInfor > .title > .author
+{
+  font-size: 12px;
+  font-weight: 400;
+  color: #b3b3b3;
 }
 .musicInfor > .image
 {
@@ -243,4 +257,80 @@
   width: 100%;
   object-fit: cover;
   object-position: center;
+}
+.PlayArea
+{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.PlayArea > .controlMusic
+{
+  width: 50%;
+  margin: 5px auto;
+  font-size: 16px;
+  padding-right: 26px;
+  padding-top: 10px;
+  color: #bababa;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+#playBtn, #pauseBtn
+{
+  padding: 11px 14px;
+  background-color: #ffff;
+  color: #000000;
+  border-radius: 30px;
+}
+#pauseBtn
+{
+  display: none;
+}
+.PlayArea > .controlMusic > i:hover
+{
+  color: #ffff;
+}
+.PlayArea > .rangeInputPLayer
+{
+  width: 100%;
+}
+.PlayArea > .rangeInputPLayer > input
+{
+  margin: 0 auto;
+  width: 80%;
+  height: 3px;
+  background-color: #ffff;
+}
+.feature
+{
+  width: 30%;
+  display: flex;
+  font-size: 18px;
+  flex-wrap: nowrap;
+  padding-top: 24px;
+  padding-right: 20px;
+  justify-content: flex-end;
+  align-items: center;
+  color: #bababa;
+  cursor: pointer;
+}
+.feature > .volume
+{
+  margin-left: 25px;
+  display: flex;
+  align-items: center;
+}
+.feature > .volume > input
+{
+  height: 3px;
+  margin-left: 10px;
+}
+.feature  i:hover
+{
+  color: #ffff;
 }
