@@ -9,56 +9,56 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsive.css">
   <title>Document</title>
 </head>
 <body>
-  <!-- vẫn chưa xong giao diện a ạ :<< -->
   <div class="wrapper">
     <section class="menu">
-      <a class="logo">
+      <a title="developing" class="logo">
         <i class="fa-brands fa-spotify"></i>
         <span>Sportify<sup><i class="fa-regular fa-registered"></i></sup></span>
       </a>
-      <a class="menuItem">
+      <a title="developing" class="menuItem">
         <i class="fa-solid fa-house"></i>
         <span>Home</span>
       </a>
-      <a class="menuItem">
+      <a title="developing" class="menuItem">
         <i class="fa-solid fa-magnifying-glass"></i>
         <span>Search</span>
       </a>
-      <a class="menuItem">
+      <a title="developing" class="menuItem">
         <i class="fa-solid fa-book"></i>
         <span>Library</span>
       </a>
-      <a class="menuItem">
+      <a title="developing" class="menuItem">
         <i class="fa-solid fa-circle-plus"></i>
         <span>Create Playlist</span>
       </a>
-      <div class="menuItem">
+      <div title="developing" class="menuItem">
         <i class="fa-brands fa-gratipay"></i>
         <span>Liked Songs</span>
       </div>
       <div class="tangle"></div>
-      <a class="menuItem">
+      <a  title="developing" class="menuItem">
         <i class="fa-solid fa-circle-arrow-down"></i>
         <span>Install App</span>
       </a>
     </section>
     <section class="header">
       <div class="navigationArrow">
-        <i class="fa-solid fa-angle-left"></i>
-        <i class="fa-solid fa-angle-right"></i>
+        <i title="developing" class="fa-solid fa-angle-left"></i>
+        <i title="developing" class="fa-solid fa-angle-right"></i>
       </div>
       <div class="navigationBtn">
-        <span>Upgrade</span>
-        <span>Login</span>
+        <span title="developing">Upgrade</span>
+        <span title="developing">Login</span>
       </div>
     </section>
     <section class="contentSpace">
       <div class="playListSpace">
         <p class="title">Top 100 Viet Nam</p>
-        <div class="playListContainer">
+        <div class="playListContainer" id="top100_VN" data-location="top100_VN"> 
           <div class="playListItem">
             <div class="image">
               <img src="https://avatar-ex-swe.nixcdn.com/song/2021/07/09/5/5/8/2/1625815274622.jpg" alt="">
@@ -115,7 +115,7 @@
           </div>
         </div>
         <p class="title">Top 100 America</p>
-        <div class="playListContainer">
+        <div class="playListContainer" id="top100_AM" data-location="top100_AM">
           <div class="playListItem">
             <div class="image">
               <img src="https://avatar-ex-swe.nixcdn.com/song/2021/07/09/5/5/8/2/1625815274622.jpg" alt="">
@@ -172,7 +172,7 @@
           </div>
         </div>
         <p class="title">Top 100 Asia</p>
-        <div class="playListContainer">
+        <div class="playListContainer" id="top100_CA" data-location="top100_CA">
           <div class="playListItem">
             <div class="image">
               <img src="https://avatar-ex-swe.nixcdn.com/song/2021/07/09/5/5/8/2/1625815274622.jpg" alt="">
@@ -202,7 +202,7 @@
           </div>
         </div>
         <p class="title">Top 100 instrumental music</p>
-          <div class="playListContainer">
+          <div class="playListContainer" id="top100_KL" data-location="top100_KL">
             <div class="playListItem">
               <div class="image">
                 <img src="https://avatar-ex-swe.nixcdn.com/song/2021/07/09/5/5/8/2/1625815274622.jpg" alt="">
@@ -214,6 +214,42 @@
             </div>
           </div>
       </div>
+      <div class="listSongInAlbumSpace">
+        <div class="albumLabel">
+          <div class="image">
+            <div class="coverLayer">
+              <i id="playBtn_albumLabel" class="fa-solid fa-play"></i>
+              <i id="pauseBtn_albumLabel"class="fa-solid fa-pause"></i>
+            </div>
+            <img id="avatarAlbum" src="https://avatar-ex-swe.nixcdn.com/song/2021/07/09/5/5/8/2/1625815274622.jpg" alt="">
+          </div>
+          <p id="titleAlbum" class="title">Top 100 Việt Nam</p>
+          <button id="playerBtn_Album">
+            <i id="playBtn_Album" class="fa-solid fa-play"></i>
+            <i id="pauseBtn_Album"class="fa-solid fa-pause"></i>
+            <p class="contentBtn">Play</p>
+          </button>
+        </div>
+        <div class="SongList">
+          <table class="tableSongList" style="width:100%">
+            <tr>
+              <th class="indexColumn">#</th>
+              <th class="nameColumn">SONG</th>
+              <th class="authorColumn">AUTHOR</th>
+            </tr>
+            <tr class="rowOfTable">
+              <td>0</td>
+              <td class="nameSongRow"><div class="image"><img src="https://avatar-ex-swe.nixcdn.com/song/2021/07/09/5/5/8/2/1625815274622.jpg" alt=""></div><span>Maria Anders</span></td>
+              <td>Germany</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td class="nameSongRow"><div class="image"><img src="https://avatar-ex-swe.nixcdn.com/song/2021/07/09/5/5/8/2/1625815274622.jpg" alt=""></div><span>Maria Anders</span></td>
+              <td>Mexico</td>
+            </tr>
+          </table>
+        </div>
+      </div>
     </section>
     <section class="musicPlayerBar">
       <div class="musicInfor">
@@ -224,34 +260,37 @@
           <p class="musicName">Kiss Me More</p>
           <p class="author">Doja Cat, SZA</p>
         </div>
-        <!-- <div class="icon">
-          <i class="fa-regular fa-heart"></i>
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        </div> -->
+          <!-- <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> -->
       </div>
       <div class="PlayArea">
         <div class="controlMusic">
-          <i class="fa-solid fa-shuffle"></i>
-          <i class="fa-solid fa-backward-fast"></i>
+          <i id="shuffleBtn" class="fa-solid fa-shuffle"></i>
+          <i id="previousSongBtn" class="fa-solid fa-backward-fast"></i>
           <i id="playBtn" class="fa-solid fa-play"></i>
           <i id="pauseBtn"class="fa-solid fa-pause"></i>
-          <i class="fa-solid fa-forward-fast"></i>
-          <i class="fa-solid fa-retweet"></i>
+          <i id="nextSongBtn" class="fa-solid fa-forward-fast"></i>
+          <i id="repeatBtn" class="fa-solid fa-retweet"></i>
         </div>
         <div class="rangeInputPLayer">
           <span class="currentTime">0:00</span>
-          <input type="range"  min="0" max="100" name="" id="">
+          <input type="range" step="1"  min="0" max="100" name="" id="inputMusicProccess">
           <span class="totalTime">3:46</span>
         </div>
       </div>
       <div class="feature">
-        <i class="fa-solid fa-rectangle-list"></i>
+        <i id="showListSongBtn" class="fa-solid fa-rectangle-list"></i>
         <div class="volume">
-          <label for="controlVolume"><i class="fa-solid fa-volume-high"></i></label>
-          <input type="range"  min="0" max="100" name="" id="controlVolume">
+          <label for="controlVolume">
+            <i id="highVolume" class="fa-solid fa-volume-high"></i> 
+            <i id="lowVolume"class="fa-solid fa-volume-low"></i>
+            <i id="noneVolume"class="fa-solid fa-volume-xmark"></i>
+          </label>
+          <input type="range" value="0" min="0" max="100" name="" id="controlVolume">
         </div>
       </div>
     </section>
+    <audio controls autoplay id="audioSpace" src=""></audio>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="./js/main.js"></script>
