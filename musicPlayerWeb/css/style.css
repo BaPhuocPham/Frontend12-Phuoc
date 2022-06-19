@@ -23,6 +23,12 @@
   background-color: #000000;
   color: #b2b2b2;
   padding: 0 24px;
+  transition: all ease 1s;
+  z-index: 2;
+}
+#logoHeader
+{
+  display: none;
 }
 .logo
 {
@@ -87,17 +93,17 @@
 /* --------------------------------- Header ----------------------------------------------- */
 .header
 {
-  width: 82%;
+  width: 100%;
   height: 64px;
   background-color: #121212;
   position: fixed;
-  margin-left: 18%;
-  padding: 0 30px;
+  padding-left: 24%;
+  padding-right: 30px;
   top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 2;
+  z-index: 1;
 }
 .header > .navigationArrow > i
 {
@@ -107,6 +113,12 @@
   font-size: 22px;
   color: #a6a6a6;
   margin-right: 15px;
+}
+.header > .navigationBtn
+{
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 .header > .navigationBtn > span
 {
@@ -119,6 +131,13 @@
   margin-left: 32px;
   cursor: pointer;
 }
+#menuBtn
+{
+  margin-left: 32px;
+  color: #ffff;
+  font-size: 18px;
+  display: none;
+}
 .header > .navigationBtn > span:hover
 {
   border-color: #ffff;
@@ -129,18 +148,20 @@
   background-color: #121212;
   width: 100%;
   padding-top: 88px;
-  padding-left: 22%;
+  padding-left: 19%;
   padding-bottom: 88px;
   min-height: 100vh;
+  z-index: 0;
 }
 .playListSpace
 {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding-left: 6%;
   /* display: none; */
 }
-.title
+.playListSpace > .title
 {
   font-size: 24px;
   font-weight: 700;
@@ -150,7 +171,7 @@
 {
   background-color: #121212;
   width: 100%;
-  margin-top: 21px;
+  margin-top: 40px;
   display: flex;
   overflow: hidden;
   padding-bottom: 40px;
@@ -236,17 +257,17 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 0;
-  bottom: 10%;
+  top: 14%;
   left: 14%;
 }
 .albumLabel > .image
 {
   width: 300px;
   height: 300px;
-  border-radius: 20px;
+  border-radius: 150px;
   overflow: hidden;
   position: relative;
+  transition: all 0.5s ease;
   z-index: 0;
 }
 .albumLabel > .image:hover  .coverLayer
@@ -293,6 +314,9 @@
 {
   text-align: center;
   margin-top: 20px;
+  color: #ffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
 }
 .albumLabel > button
 {
@@ -411,6 +435,7 @@
   display: flex;
   flex-wrap: nowrap;
   align-items: flex-start;
+  z-index: 3;
 }
 audio 
 {

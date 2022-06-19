@@ -29,8 +29,16 @@ const element_pauseBtn_AlbumSpace = document.querySelector("#pauseBtn_Album")
 const element_contentBtn_AlbumSpace = document.querySelector(".contentBtn")
 const element_trTag_AlbumSpace = document.querySelectorAll(".rowOfTable")
 const element_musicPlayerBar = document.querySelector(".musicPlayerBar")
+const element_musicDisc_AlbumSpace = document.querySelector(".albumLabel > .image")
+const element_menuBar = document.querySelector(".menu");
 
-
+const cdAnimate = element_musicDisc_AlbumSpace.animate([
+  { transform: 'rotate(360deg)'}
+], {
+  duration: 10000, 
+  iterations: Infinity
+})
+cdAnimate.pause()
 let currentSongIndex
 let currentAlbum
 let currentTopic
@@ -40,7 +48,9 @@ let isRandom = false
 let indexMusicPlayed = []
 let isInAlbum = false
 let listMusic
-
+let currentTime
+let isMenuOpen = false
+element_playBtn_albumLabel.style.cursor = "url(''), auto";
 // function getIndexOfSong(indexSong) 
 // { 
 //   if(dataIndex)
@@ -61,6 +71,7 @@ fetch(api)
           getLocal()
           updateFromLocal()
           console.log(listMusic)
+          
           function updateFromLocal()
           {
             displayMusicInfor()
@@ -69,7 +80,7 @@ fetch(api)
               element_audioTag.setAttribute("src", `${listMusic[currentSongIndex].music}`) 
               element_audioTag.pause()
               element_shuffleBtn_playerBar.classList.toggle("toggle", isRandom)
-              element_repeatBtn_playerBar.classList.toggle("toggle", isRepeat)               
+              element_repeatBtn_playerBar.classList.toggle("toggle", isRepeat)  
             }
           }
           function getLocal()
@@ -80,6 +91,13 @@ fetch(api)
             isRandom = JSON.parse(window.localStorage.getItem("isRandom"))
             isInAlbum = JSON.parse(window.localStorage.getItem("isInAlbum"))
             listMusic = JSON.parse(window.localStorage.getItem("listMusic"))
+            if(isInAlbum == true)
+              {
+                element_playListSpace.style = "display: none"
+                element_listSongInAlbumSpace.style = "display: flex"
+                displayListSongInAlbum()
+                checkFollowPlaying()
+              }
           }  
           function saveLocal(key, value, isArray)
           {
@@ -196,7 +214,6 @@ fetch(api)
               {
                 let addTr = document.createElement("tr")
                 addTr.setAttribute("data-index", i)
-                addTr.setAttribute("onclick", `getIndexOfSong(${i})`)
                 addTr.classList.add("rowOfTable")
                 addTr.innerHTML = 
                 `
@@ -212,6 +229,17 @@ fetch(api)
                 element_tableSongListInAlbum.appendChild(addTr)
               }
             }
+            $(".rowOfTable").click(function (e) { 
+              e.preventDefault();
+              let dataIndex = $(this).data("index");
+              console.log(dataIndex)          
+              currentSongIndex = dataIndex
+              element_audioTag.setAttribute("src", `${listMusic[currentSongIndex].music}`)
+              isPlaying = true
+              checkPlaying() 
+              displayMusicInfor()
+              console.log("done")
+            });
           }
           function checkFollowPlaying()
           {
@@ -220,6 +248,7 @@ fetch(api)
               element_playBtn_albumLabel.style = "display: none"
               element_playBtn_AlbumSpace.style = "display: none"
               element_pauseBtn_albumLabel.style = "display: block"
+              cdAnimate.play()
               element_pauseBtn_AlbumSpace.style = "display: block"
               element_contentBtn_AlbumSpace.innerHTML = "Pause"
             }
@@ -229,6 +258,7 @@ fetch(api)
               element_pauseBtn_AlbumSpace.style = "display: none"
               element_playBtn_albumLabel.style = "display: block"
               element_playBtn_AlbumSpace.style = "display: block"
+              cdAnimate.pause()
               element_contentBtn_AlbumSpace.innerHTML = "Play"
             }
             let arrayTr = document.querySelectorAll(".tableSongList tr")
@@ -286,14 +316,7 @@ fetch(api)
               element_musicName_pLayerBar.innerHTML = `${listMusic[currentSongIndex].title}`
               element_author_pLayerBar.innerHTML = `${listMusic[currentSongIndex].creator}`
               element_avatar_pLayerBar.src = `${listMusic[currentSongIndex].avatar}`
-              element_musicPlayerBar.style = "display: flex"
-              if(isInAlbum == true)
-              {
-                element_playListSpace.style = "display: none"
-                element_listSongInAlbumSpace.style = "display: flex"
-                displayListSongInAlbum()
-                checkFollowPlaying()
-              }
+              element_musicPlayerBar.style = "display: flex"              
             }            
           }
           function checkMusicPlayed(randomIndex)
@@ -499,18 +522,18 @@ fetch(api)
               }
               saveLocal("isInAlbum", isInAlbum, false)
             });
-            // console.log("hi")
-              // $()).click(function (e) { 
-              // e.preventDefault();
-              //     console.log("click")
-              // let dataIndex = $(e).data("index")
-              // if(dataIndex)
-              // {
-              //   currentSongIndex = dataIndex
-              //   element_audioTag.setAttribute("src", `${listMusic[currentSongIndex].music}`) 
-              //   console.log("done")
-              // }
-            // });
+            $("#menuBtn").click(function (e) { 
+              e.preventDefault();
+              isMenuOpen = !isMenuOpen
+              if(isMenuOpen == true) 
+              {
+                element_menuBar.style = "display: flex; transform: translateX(50%); opacity: 1;"
+              }
+              else 
+              {
+                element_menuBar.style = "display: none; left: -10%; opacity: 0;"
+              }
+            });
             
   
             // $( function() {

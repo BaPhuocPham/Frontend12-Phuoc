@@ -28,10 +28,14 @@
   {
     font-size: 12px;
   }
-  /* .albumLabel
+  .PlayArea > .controlMusic
   {
-    top: 20%;
-  } */
+    margin-left: 3px;
+  }
+  .albumLabel
+  {
+    top: 14%;
+  }
   .albumLabel > .image
   {
     width: 150px;
@@ -49,6 +53,7 @@
   {
     margin-top: 30px;
     width: 40%;
+    font-size: 18px;
   }
   .albumLabel > button > i
   {
@@ -65,5 +70,175 @@
 }
 @media only screen and (max-width: 740px) 
 {
-
+  #menuBtn
+  {
+    display: inline-block;
+  }
+  .menu
+  {
+    display: none;
+    opacity: 0;
+    left: -15%;
+    z-index: 3; 
+    width: 30%;
+  }
+  .musicPlayerBar
+  {
+    z-index: 4;
+  }
+  #logoHeader
+  {
+    display: block;
+    width: 30%;
+  }
+  .header
+  {
+    padding-left: 6%;
+  }
+  .header > .navigationArrow
+  {
+    display: none;
+  }
+  .contentSpace
+  {
+    padding-left: 0;
+  }
+  .header > .navigationBtn > span
+  {
+    font-size: 10px;
+  }
+  .playListSpace > .title
+  {
+    font-size: 22px;
+  }
+  .playListItem
+  {
+    width: 25%;
+  }
+  .playListItem > .playListName
+  {
+    font-size: 12px;
+  }
+  .musicInfor > .title > .musicName
+  {
+    font-size: 10px;
+  }
+  .musicInfor > .title > .author
+  {
+    font-size: 8px;
+  }
+  .musicInfor > .image
+  {
+    width: 40%;
+  }
+  .PlayArea
+  {
+    width: 45%;
+  }
+  .PlayArea > .controlMusic
+  {
+    padding: 0 20px;
+    padding-top: 0px;
+    font-size: 14px;
+    padding-left: 4px;
+    margin-left: 14px;
+  }
+  .feature
+  {
+    width: 25%;
+    padding-right: 10px;
+    font-size: 16px;
+  }
+  .feature > .volume > input
+  {
+    width: 70%;
+  }
+  .rangeInputPLayer 
+  {
+    font-size: 15px;
+  }
+  .albumLabel
+  {
+    display: none;
+  }
+  .SongList
+  {
+    padding-left: 3%;
+  }
+  .SongList > .tableSongList
+  {
+    padding-right: 27px; 
+  }
+  .playListItem > .image > .playBtnPlayList
+  {
+    font-size: 14px;
+    padding: 7px 10px;
+  }
+}
+@media only screen and (max-width: 450px) 
+{
+  .header > .navigationBtn > span
+  {
+    margin-left: 12px;
+  }
+  #menuBtn
+  {
+    margin-left: 12px;
+  }
+  .playListItem
+  {
+    width: 40%;
+  }
+  .menu
+  {
+    width: 40%;
+    left: -20%;
+  }
+  .menu > .tangle
+  {
+    margin-bottom: 60px;
+  }
+  .musicPlayerBar
+  {
+    height: 70px;
+  }
+  .musicInfor > .title > .musicName
+  {
+    font-size: 8px;
+  }
+  .musicInfor > .title > .author
+  {
+    font-size: 6px;
+  }
+  .rangeInputPLayer
+  {
+    font-size: 8px;
+  }
+  .PlayArea > .controlMusic
+  {
+    font-size: 10px;
+    padding-left: 0px;
+    margin-left: 12px;
+  }
+  .feature
+  {
+    padding-right: 5px;
+    font-size: 10px;
+  }
+  .feature > .volume
+  {
+    margin-left: 10px;
+  }
+  #playBtn, #pauseBtn
+  {
+    padding: 8px 10px;
+  }
+  .feature > .volume > input
+  {
+    margin-left: 5px;
+  }
+  .playListItem > .image > .playBtnPlayList
+  {
+    font-size: 12px;
+  }
 }
