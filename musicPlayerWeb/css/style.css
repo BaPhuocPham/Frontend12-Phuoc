@@ -9,6 +9,7 @@
 .wrapper
 {
   width: 100%;
+  min-width: 350px;
 }
 /* --------------------------------- Menu ----------------------------------------------- */
 .menu
@@ -38,6 +39,7 @@
   margin-bottom: 38px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .logo > i
 {
@@ -113,6 +115,7 @@
   font-size: 22px;
   color: #a6a6a6;
   margin-right: 15px;
+  cursor: pointer;
 }
 .header > .navigationBtn
 {

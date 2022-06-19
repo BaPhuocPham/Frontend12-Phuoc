@@ -31,6 +31,8 @@ const element_trTag_AlbumSpace = document.querySelectorAll(".rowOfTable")
 const element_musicPlayerBar = document.querySelector(".musicPlayerBar")
 const element_musicDisc_AlbumSpace = document.querySelector(".albumLabel > .image")
 const element_menuBar = document.querySelector(".menu");
+const element_arrowLeft = document.querySelector("#arrowLeft")
+const element_arrowRight = document.querySelector("#arrowRight")
 
 const cdAnimate = element_musicDisc_AlbumSpace.animate([
   { transform: 'rotate(360deg)'}
@@ -97,6 +99,9 @@ fetch(api)
                 element_listSongInAlbumSpace.style = "display: flex"
                 displayListSongInAlbum()
                 checkFollowPlaying()
+                element_arrowRight.style = "cursor: not-allowed;"
+                element_arrowRight.click = false
+                element_arrowLeft.style = "cursor: pointer;"
               }
           }  
           function saveLocal(key, value, isArray)
@@ -383,6 +388,29 @@ fetch(api)
             displayMusicInfor()
             console.log("next song")
           }
+          function checkArrow(arrow)
+          {
+            if(arrow == 1)
+            {
+                isInAlbum = false
+                element_listSongInAlbumSpace.style = "display: none"
+                element_playListSpace.style = "display: block"
+                element_arrowLeft.style = "cursor: not-allowed;"
+                element_arrowRight.click = true
+                element_arrowLeft.click = false
+                element_arrowRight.style = "cursor: pointer;"
+            }
+            if(arrow == 2)
+            {
+              isInAlbum = true
+              element_playListSpace.style = "display: none"
+              element_listSongInAlbumSpace.style = "display: block"
+              element_arrowRight.style = "cursor: not-allowed;"
+              element_arrowLeft.click = true
+              element_arrowRight.click = false
+              element_arrowLeft.style = "cursor: pointer;"
+            }
+          }
           $(document).ready(function () {
             $(".playListItem").click(function (e) { 
               e.preventDefault();
@@ -534,10 +562,19 @@ fetch(api)
                 element_menuBar.style = "display: none; left: -10%; opacity: 0;"
               }
             });
-            
-  
-            // $( function() {
-            //   $("body").tooltip();
-            // } )
+            $(".logo").click(function (e) { 
+              e.preventDefault();
+              isInAlbum = false
+              element_listSongInAlbumSpace.style = "display: none"
+              element_playListSpace.style = "display: block"
+            });
+            $("#arrowLeft").click(function (e) { 
+              e.preventDefault();
+              checkArrow(1);
+            });
+            $("#arrowRight").click(function (e) { 
+              e.preventDefault();
+              checkArrow(2);
+            });
           })
         })
